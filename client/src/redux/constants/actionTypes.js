@@ -1,7 +1,8 @@
-const CREATE = "CREATE";
-const UPDATE = "UPDATE";
-const DELETE = "DELETE";
-const LIKE = "LIKE";
-const FETCH_ALL = "FETCH_ALL";
+export const CREATE = "CREATE";
+export const UPDATE = "UPDATE";
+export const DELETE = "DELETE";
+export const LIKE = "LIKE";
+export const FETCH_ALL = "FETCH_ALL";
 
-export { CREATE, UPDATE, DELETE, LIKE, FETCH_ALL };
+export const AUTH = "AUTH";
+export const LOGOUT = "LOGOUT";
