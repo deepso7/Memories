@@ -3,6 +3,7 @@ import express from "express";
 import cors from "cors";
 
 import postRoutes from "./routes/posts.js";
+import userRoutes from "./routes/users.js";
 
 import connectDB from "./config/db.js";
 
@@ -18,6 +19,7 @@ connectDB();
 
 //Define Routes
 app.use("/posts", postRoutes);
+app.use("/user", userRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log("Server is running on port:", PORT));
