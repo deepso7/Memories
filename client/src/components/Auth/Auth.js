@@ -16,7 +16,7 @@ import Icon from "./icon";
 import useStyles from "./styles";
 import Input from "./Input";
 
-import { signin, signup } from "../../redux/actions/auth";
+import { signIn, signUp } from "../../redux/actions/auth";
 
 const initialState = {
   firstName: "",
@@ -41,9 +41,9 @@ const Auth = () => {
     e.preventDefault();
 
     if (isSignup) {
-      dispatch(signup(formData, history));
+      dispatch(signUp(formData, history));
     } else {
-      dispatch(signin(formData, history));
+      dispatch(signIn(formData, history));
     }
   };
 
@@ -53,7 +53,7 @@ const Auth = () => {
 
   const switchMode = () => {
     setIsSignup((prevIsSignup) => !prevIsSignup);
-    handleShowPassword(false);
+    setShowPassword(false);
   };
 
   const googleSuccess = async (res) => {
